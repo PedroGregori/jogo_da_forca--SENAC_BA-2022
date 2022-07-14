@@ -1,5 +1,6 @@
 import os
 op = 0
+score = 0
 while op != 3:
   def txt():
     print("::::::::::::\Jogo da Forca/::::::::::::")
@@ -14,8 +15,7 @@ while op != 3:
 
   if op == 1:
     os.system('cls')
-    txt()
-    score = 0
+    txt() 
     word = input("Digite a palavra: ")
     dica = input("Dê uma dica: ")
     for letra in word:
@@ -41,8 +41,9 @@ while op != 3:
                 print("Você perdeu!")
                 break
         print('\n')
-    if acerto == len(word):
-        print('Você acertou a palavra. Parabéns!')
+        if acerto == len(word):
+          score = score + 5
+          print('Você acertou a palavra. Parabéns!')
 
   if op == 2:
     print('Pontuação:',score)
