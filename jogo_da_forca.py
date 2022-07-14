@@ -11,6 +11,7 @@ while op != 3:
   erro = 0
   acerto = 0
   os.system('cls')
+
   if op == 1:
     os.system('cls')
     txt()
@@ -28,12 +29,12 @@ while op != 3:
         print('Quantidade de letra da palavra:',len(word))
         print('Dica:',dica)
         l = input("Digite uma letra: ")
-          
+
         for indice, letra in enumerate(word):
           if l == letra:
               hidden_word[indice] = l
               acerto += 1
-      
+
         if l not in word:
               erro += 1
               if erro >= 6:
@@ -42,8 +43,7 @@ while op != 3:
         print('\n')
     if acerto == len(word):
         print('Você acertou a palavra. Parabéns!')
-    while acerto == len(word):
-      score = score + 5
+
   if op == 2:
     print('Pontuação:',score)
 print("Fim :P")
